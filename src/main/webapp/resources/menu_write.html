@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>GTCS</title>
+    <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet"
+	href="http://lei1007.shiningcorp.com/css/default.css">
+<link rel="stylesheet"
+	href="http://lei1007.shiningcorp.com/skin/latest/sh_basic/style.css">
+<link rel="stylesheet"
+	href="http://lei1007.shiningcorp.com/css/user.css">
+<link rel="stylesheet"
+	href="http://lei1007.shiningcorp.com/css/page_style.css">
+<!-- <link rel="stylesheet"type="text/css"href="css/font1.css" /> -->
+<link rel="stylesheet"type="text/css"href="css/font1.css" />
+<link rel="stylesheet"
+	href="http://lei1007.shiningcorp.com/sh_img/hd/aside/style.css">
+
+<script src="http://lei1007.shiningcorp.com/js/jquery-1.8.3.min.js"></script>
+<script src="http://lei1007.shiningcorp.com/js/jquery.menu.js"></script>
+<script src="http://lei1007.shiningcorp.com/js/common.js"></script>
+<script src="http://lei1007.shiningcorp.com/js/wrest.js"></script>
+<script type="text/javascript"
+	src="http://lei1007.shiningcorp.com/sh_img/hd/aside/jquery-ui.js"></script>
+<script src="http://lei1007.shiningcorp.com/sh_img/hd/aside/script.js"></script>
+<script
+	src="http://lei1007.shiningcorp.com/sh_img/hd/top_menu/script.js"></script>
+    <script src="../www/css/sweetalert.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="../www/css/sweetalert.css">
+<script src="js/jquery-2.2.2.min.js"></script>
+<script src="js/ajaxform.js"></script>
+    </head>
+  <body style="">
+      <script>
+          $(function(){
+	//폼전송
+	$('#ajaxform').ajaxForm({
+            //submit이후의 처리
+            success: function(responseText, statusText){
+            	alert("전송성공!!");
+            },
+            //ajax error
+            error: function(){
+                    alert("전송에러!!");
+            }                               
+          });
+});
+      </script>
+	<div id="sh_wrapper">
+		<!-- 상단 시작 { -->
+		<div id="sh_hd">
+			<div class="top_nav_bg"></div>
+			<h1 id="hd_h1">샤이닝 - 레저/스포츠 홈페이지 샘플</h1>
+			<div id="skip_to_container">
+				<a href="#container">본문 바로가기</a>
+			</div>
+
+			<!-- 팝업레이어 시작 { -->
+			<div id="hd_pop">
+				<h2>팝업레이어 알림</h2>
+
+				<span class="sound_only">팝업레이어 알림이 없습니다.</span>
+			</div>
+
+			<script>
+				$(function() {
+					$(".hd_pops_reject").click(function() {
+						var id = $(this).attr('class').split(' ');
+						var ck_name = id[1];
+						var exp_time = parseInt(id[2]);
+						$("#" + id[1]).css("display", "none");
+						set_cookie(ck_name, 1, exp_time, g5_cookie_domain);
+					});
+					$('.hd_pops_close').click(function() {
+						var idb = $(this).attr('class').split(' ');
+						$('#' + idb[1]).css('display', 'none');
+					});
+					$("#hd").css("z-index", 1000);
+				});
+			</script>
+			<!-- } 팝업레이어 끝 -->
+			<div id="sh_hd_wrapper">
+
+
+
+
+				<div id="sh_top_menu_wrapper">
+					<h1 id="top_logo"><a href="GTCSMAIN">
+						<img src="./resources/sh_img/hd/top_menu/logo.png" width="150px"
+							height="75px" alt="사이트 로고" />
+					</h1>
+
+					<div id="top_menu_wrapper">
+						<!--menu!-->
+						<ul id="top_menu">
+
+
+							<li class="list list01"><a href="show_menu">그늘집</a></li>
+
+							<li class="list list02"><a href="shop/list">쇼핑몰</a>
+								<ul class="sub_ul2">
+									<li><a href="shop/goodlist?category=Driver" class="">DRIVERS</a>
+										<a href="shop/goodlist?category=PUTTER" class="">PUTTER</a> <a
+										href="shop/goodlist?category=CLUB" class="">CLUB</a> <a
+										href="shop/goodlist?category=HYBRIDS" class="">HYBRIDS</a></li>
+									<li class="smenu_back"></li>
+								</ul></li>
+
+
+									<li class="list list03"><a href="adm/home">관리자페이지</a>
+										<ul class="sub_ul3"></ul></li>
+
+							<li class="list list04"><a href="score">스코어관리</a></li>
+
+							<li class="list list05"><a href="notice">공지사항</a></li>
+
+						</ul>
+					</div>
+					<!--menu!-->
+					<div style="clear: both; visibility: hidden"></div>
+				</div>
+				<!-- 소분류 끝 -->
+			</div>
+		</div>
+	</div>
+	<div id="sh_container">	
+	<div id="sh_container_topbg"></div>
+		<!-- 서브상단 이미지 -->	
+	<div id="sh_container_top"><img src="./resources/sh_img/hd/sub_main_banner/sub_main_banner.png" alt="" /></div>
+	<div id="sh_container_wrapper">	
+		<!-- 서브메뉴 -->
+		<div id="sh_aside"><div id="aside_tit"><ul>
+
+</ul></div>
+<!-- 대분류 끝 -->
+
+<!-- 소분류 시작 -->
+<div id="l_menu">
+<ul>
+	
+	<li class='l_menu_ON'  >
+	<a href="" >주문내역</a>
+	</li>
+
+	
+
+	</ul
+></div></div>
+                <div class="grandparent">    
+                    <!--페이지내용-->
+                <div class="Write" style="width:100% ; margin-left:450px;font-size:15px; overflow-y:auto; margin-bottom:60px">
+                
+                    <form id="ajaxform" action="https://shielded-fortress-32957.herokuapp.com/php/imgurapi.php" method="post" enctype="multipart/form-data">
+                                메뉴이름 : <input type="text" name="food_name" class="writeTxtFood_name" placeholder="메뉴이름을 입력하세요"><br><br>
+                                Image : <input name="img" size="35" type="file"/>
+                                <input type="submit" name="submit" value="Upload"/><br/><br/>
+                        </form>
+                        
+                        가격 : <input type="number" class="writeTxtPrice" placeholder="가격을 입력하세요"><br/><br/>
+                        <form onsubmit="return false" oninput="level.value = flevel.valueAsNumber">
+                        사이즈 : <label for="flying"></label>
+                        <input name="flevel" type="range" id="flying" class="writeTxtSize" placeholder="사이즈를 입력하세요" min="1" max="4" step="1" value="1">
+                        <output for="flying" name="level">1</output>/4<br><br/>
+                        <select class="writeTxtLev">
+                        <option value="1">음식</option>
+                        <option value="2">음료</option>
+                        </select>
+                    </form><br/>
+                            <div class="ItemButtons">
+                                <button class="writeBtnWrite">완료</button>
+                                <button class="writeBtnCancel">취소</button>
+                         </div>
+                        </div>
+                    </div>        
+    <!-- Scripts -->
+    <script src="../resources/js/app.js"></script>
+    </body>
+</html>

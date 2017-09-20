@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sjk.board.adm">
+	<select id="selectCount" resultType="string">
+		SELECT format(SUM(price*quantity),0)
+		<![CDATA[FROM orders where date_format(order_date, '%Y') = (select date_format(now(), '%Y'))]]>
+	</select>
+
+	<select id="selectCountmon" resultType="string">
+		select format(SUM(price*quantity),0) from orders
+		<![CDATA[
+			where order_date > (SELECT DATE_ADD(NOW(), INTERVAL -1 MONTH));
+		]]>
+	</select>
+	<select id="selectCount1" resultType="int">
+		SELECT sum(price*quantity)
+		FROM
+		orders
+	</select>
+
+	<select id="selectCountmon1" resultType="int">
+		select sum(price*quantity) from orders
+		<![CDATA[
+			where order_date > (SELECT DATE_ADD(NOW(), INTERVAL -1 MONTH));
+		]]>
+	</select>
+
+	<select id="goodmon" resultType="admVO">
+		select month(order_date) as mon,
+		sum(price*quantity) as price
+		from orders group by month(order_date);
+
+	</select>
+	<select id="goodmonrank" resultType="admVO">
+		select month(order_date) as
+		mon,
+		sum(price*quantity) as price
+		from orders group by
+		month(order_date);
+
+	</select>
+	<select id="newor" resultType="int">
+		SELECT count(*)
+		FROM
+		orders
+		where
+		state = ('결제 완료')
+	</select>
+	
+	
+	
+	<update id="modify">
+		update orders set state='배송 완료'
+		where no = #{no}
+	</update>
+
+
+
+	<select id="list" resultType="recordVO">
+		select sum(price*quantity) as
+		price,
+		date_format(order_date, '%Y-%m') as mon
+		 <![CDATA[FROM orders where date_format(order_date, '%Y') = (select date_format(now(), '%Y'))]]> group by
+		month(order_date)
+	</select>
+
+	<select id="list2" resultType="recordVO">
+		select sum(price*quantity) as price,
+		date_format(order_date,
+		'%Y-%m-%d') as mon
+		from
+		<![CDATA[
+		orders where ( order_date > LAST_DAY(NOW() - interval 1 month) AND order_date <= LAST_DAY(NOW()) )group by day(order_date)
+		]]>
+	</select>
+
+	<select id="list3" resultType="recordVO">
+		select sum(price*quantity) as
+		price,
+		date_format(order_date, '%Y') as mon
+		from
+		orders group by
+		year(order_date)
+	</select>
+
+	<select id="toporder" resultType="buyVO" parameterType="String">
+		SELECT
+		o.no, o.bno,sum(quantity) as quantity, g.manufacturer, g.name,
+		g.price,o.state,
+		g.category, g.imgfile FROM orders o, goods g
+		where
+		o.bno = g.bno
+		group by o.bno
+					<![CDATA[
+		order by quantity desc limit 0,3		
+				]]>
+	</select>
+	<select id="toporderrank" resultType="buyVO" parameterType="String">
+		SELECT
+		o.no, o.bno,sum(quantity) as quantity, g.manufacturer, g.name,
+		g.price,o.state,
+		g.category, g.imgfile FROM orders o, goods g
+		where
+		o.bno = g.bno
+		group by o.bno	
+			<![CDATA[
+		order by quantity desc limit 0,3		
+				]]>
+	</select>
+	<select id="cal" resultType="int">
+
+select count(*) from orders
+
+	</select>
+	
+</mapper> 

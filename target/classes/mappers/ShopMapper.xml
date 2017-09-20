@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sjk.board.vo.ShopVO">
+	<!-- <resultMap id = "memberMap" type = "Member"></resultMap> -->
+	<!-- <resultMap id = "loginMap" type ="LoginInfo"></resultMap> -->
+
+	<select id="selectCount" resultType="shopVO" parameterType="String">
+		SELECT COUNT(*) FROM goods
+		WHERE userid = #{userid}
+	</select>
+
+	<select id="selectCount1" resultType="int">
+		SELECT COUNT(*) FROM goods
+	</select>
+
+
+
+	<select id="selectCountcate" resultType="int">
+		SELECT COUNT(*) FROM
+		goods
+		WHERE category = #{category}
+	</select>
+	<select id="listSearchCount" resultType="int">
+		<![CDATA[
+			select count(bno)
+			from goods
+			where bno > 0
+		]]>
+
+		<if test="searchType != null">
+			<if test="searchType == 'num'.toString()">
+				and bno like CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="searchType == 'na'.toString()">
+				and name like CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="searchType == 're'.toString()">
+				and userid like CONCAT('%', #{keyword}, '%')
+			</if>
+		</if>
+	</select>
+
+	<select id="goodlistSearchCount" resultType="int">
+		<![CDATA[
+			select count(bno)
+			from goods
+			where bno > 0 and category = #{category}
+		]]>
+
+		<if test="searchType != null">
+			<if test="searchType == 'num'.toString()">
+				and bno like CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="searchType == 'na'.toString()">
+				and name like CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="searchType == 're'.toString()">
+				and userid like CONCAT('%', #{keyword}, '%')
+			</if>
+		</if>
+	</select>
+
+	<select id="selectList" resultType="shopVO">
+		SELECT * FROM goods
+
+	</select>
+
+<!-- 	<select id="groupby" resultType="shopVO"> -->
+<!-- 				<![CDATA[ -->
+<!-- 			SELECT * FROM goods -->
+<!-- 			WHERE   bno > 0 -->
+<!-- 		]]> -->
+<!-- 		<if test="orderby != null"> -->
+<!-- 			<if test="orderby == pop"> -->
+<!-- 				order by price -->
+<!-- 			</if> -->
+<!-- 			<if test="orderby == pop"> -->
+<!-- 				order by price -->
+<!-- 			</if> -->
+<!-- 			<if test="orderby == pop"> -->
+<!-- 				order by price -->
+<!-- 			</if> -->
+<!-- 		</if> -->
+
+<!-- 	</select> -->
+
+	<select id="selectListkey" resultType="shopVO">
+		<![CDATA[
+			SELECT * FROM goods
+			where bno > 0
+		]]>
+
+		<if test="searchType != null">
+			<if test="searchType == 'num'.toString()">
+				and bno like CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="searchType == 'na'.toString()">
+				and name like CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="searchType == 're'.toString()">
+				and userid like CONCAT('%', #{keyword}, '%')
+			</if>
+		</if>
+		<![CDATA[
+			order by bno desc
+			limit #{pageStart}, #{perPageNum}
+		]]>
+	</select>
+	<select id="goodselectList" resultType="shopVO">
+				<![CDATA[
+			SELECT * FROM goods
+			WHERE category = #{category} and  bno > 0
+		]]>
+		<if test="searchType != null">
+			<if test="searchType == 'num'.toString()">
+				and bno like CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="searchType == 'na'.toString()">
+				and name like CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="searchType == 're'.toString()">
+				and userid like CONCAT('%', #{keyword}, '%')
+			</if>
+		</if>
+
+	</select>
+	<!-- <insert id="write"> -->
+	<!-- INSERT INTO goods (name, size, category, price, -->
+	<!-- userid) -->
+	<!-- VALUES (#{name},#{size},#{category},#{price},#{userId}) -->
+	<!-- </insert> -->
+	<insert id="write" parameterType="hashmap">
+		INSERT INTO goods (name,
+		category, price,stock,manufacturer, imgfile)
+		VALUES
+		(#{name},#{category},#{price},#{stock},
+		#{manufacturer},#{imgFileBytes,jdbcType=BLOB})
+	</insert>
+	<select id="selectOne" resultType="shopVO">
+		SELECT * FROM goods WHERE bno
+		=
+		#{VALUE}
+	</select>
+
+	<insert id="saveImage" parameterType="java.util.Map">
+		INSERT INTO img_table (img)
+		VALUES(#{img})
+	</insert>
+	<select id="getByteImage" resultType="java.util.Map">
+		SELECT imgfile
+		FROM goods
+		WHERE bno =
+		#{VALUE}
+	</select>
+		<select id="getByteImage1" resultType="java.util.Map">
+		SELECT imgfile
+		FROM food_reservation
+		WHERE pid =
+		#{VALUE}
+	</select>
+	<select id="getImages" parameterType="hashmap" resultType="TestgetImages">
+		select price, bno, name, imgFile
+		from goods
+		where bno=#{bno}
+	</select>
+	<update id="decrease1">
+		update goods g,orders o set
+		stock=g.stock-o.quantity
+		where g.bno = o.bno and o.no = #{no}
+	</update>
+
+	<select id="selectMax" resultType="int">
+		select Max(no)
+		from orders
+	</select>
+
+	<select id="selectMax1" resultType="int">
+		select Max(no)
+		from orders
+	</select>
+
+	<update id="decrease">
+		update goods g,cart c set
+		stock=g.stock-c.quantity
+		where g.bno = #{shop_no} and c.cno = #{cno}
+	</update>
+	<insert id="insertorder">
+		INSERT INTO orders (order_date, userid,bno,
+		address,quantity,price,receiver, state)
+		VALUES
+		(now(),#{userid},#{bno},#{address},#{quantity},#{price},#{receiver},'결제 완료')
+
+	</insert>
+	<select id="selectListorder" resultType="buyVO" parameterType="String">
+		SELECT o.no, o.bno,o.quantity, g.manufacturer, g.name,
+		g.price,o.state,
+		g.category, g.imgfile FROM orders o, goods g
+		where
+		o.bno = g.bno and
+		o.userid = #{userid}
+		order by order_date
+	</select>
+	<select id="selectListorder1" resultType="buyVO" parameterType="String">
+		SELECT o.no, o.bno,o.quantity, g.manufacturer, g.name,
+		g.price,o.state,
+		g.category, g.imgfile FROM orders o, goods g
+		where
+		o.bno = g.bno and o.state = '배송 완료'
+		order by order_date
+	</select>
+	<select id="selectListorder2" resultType="buyVO" parameterType="String">
+		SELECT o.no, o.bno,o.quantity, g.manufacturer, g.name,
+		g.price,o.state,
+		g.category, g.imgfile FROM orders o, goods g
+		where
+		o.bno = g.bno and o.state = '결제 완료'
+		order by order_date
+	</select>
+	<update id="decreaseorder">
+		update goods g,cart c set
+		stock=g.stock-c.quantity
+		where g.bno = #{shop_no} and c.cno = #{cno}
+	</update>
+</mapper>

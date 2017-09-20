@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yjc.wdb.mapper.CalendarMapper">
+	<resultMap id="Calendar" type="Calendar"></resultMap>
+	
+	<insert id="insertcal">
+		insert into calendar(userid, title, startday, endday, time, color,status,cid)
+		values(#{userid}, #{title}, #{startday}, #{endday}, #{time}, #{color},'예약완료',#{cid})
+	</insert>
+
+
+	<select id="getEvents" resultMap="Calendar">
+		select * from calendar
+		where userid = #{userid} 
+	</select>
+
+
+	<select id="getEvents2" resultMap="Calendar">
+		select * from calendar 
+	</select>
+	
+	
+	<select id="getadminEvents" resultMap="Calendar">
+		select * from calendar
+	</select>
+	
+	<select id="eventList" resultMap="Calendar">
+		select * from calendar
+		where cno = #{cno}
+		order by cno desc
+	</select>
+
+	<select id="eventList2" resultMap="Calendar">
+		select * from calendar
+		where startday=#{value} and status='예약완료';
+	</select>
+		
+
+	<select id="readcal" resultMap="Calendar">
+		select * from calendar
+		where cno = #{cno}
+	</select>
+	
+	<select id="calendardetail" resultMap="Calendar" parameterType="int">
+		select title, startday, time, cno from calendar
+		where cno=#{cno}
+	</select>
+	
+	<delete id="delete">
+ 	delete from calendar where cno = #{cno}
+ 	</delete>
+
+	<update id="eventModify">
+ 	update calendar set title=#{title}
+ 	where cno = #{cno}
+	 </update>
+	
+	<!-- 검색 -->
+	<select id="selectListkey" resultType="member">
+      <![CDATA[
+         SELECT userid, username, phone
+         FROM member
+         Where member='golfer'
+      ]]>
+      
+      <if test="searchType != null">
+         <if test="searchType == 'userid'.toString()">
+            and userid like CONCAT('%', #{keyword}, '%')
+         </if>
+         <if test="searchType == 'username'.toString()">
+            and username like CONCAT('%', #{keyword}, '%')
+         </if>
+         <if test="searchType == 'phone'.toString()">
+            and phone like CONCAT('%', #{keyword}, '%')
+         </if>
+      </if>
+      
+   </select>
+   
+   <insert id="pinsert">
+		insert into reserPur(cno, userid, startday) 
+		values (#{cno}, #{userid}, #{startday})
+	</insert>
+	
+ 	
+			
+<update id="gmodify">
+ 	update cgroup set cdnum=#{cdnum}, cname=#{cname}
+ 	where cid = #{cid}
+ </update>
+	
+	
+</mapper>

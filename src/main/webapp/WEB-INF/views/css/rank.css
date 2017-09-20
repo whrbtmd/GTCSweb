@@ -1,0 +1,15 @@
+.coupon_shop{}
+.coupon_shop .thumbnail{border:6px solid #e7e7e7;}
+.coupon_shop .shop_name{font-weight:bold; padding-bottom:2px; padding-top:4px; font:12px/1.5 dotum;}
+.coupon_shop .shop_name a{font-weight:bold; color:#333;}
+.coupon_shop .shop_name span{font:11px/1.5px tahoma; letter-spacing:normal; font-weight:bold;}
+.coupon_shop .shop_name .rank{vertical-align:top; width:70px;}
+.coupon_shop .coupon{padding:8px 0 0 0; margin:0px 0 0 40px; width:104px; height:31px; text-align:center; background: no-repeat url('http://img.e-runsesang.com/main_201107/coupon_btn_bg2.gif') 0px 2px; color:#fff; font:12px/1.5 dotum; font-weight:bold; cursor:pointer;}
+.coupon_shop .rank2{font:14px/1.5 tahoma; font-weight:bold; letter-spacing:-1px; color:#ff9600;}
+.coupon_shop .rank3{font:14px/1.5 tahoma; font-weight:bold; letter-spacing:-1px; color:#5b657e;}
+.coupon_shop .shop_info{padding-top:2px; line-height:16px; padding-left:10px; height:34px;}
+.coupon_shop .shop_info a{color:#666;}
+.coupon_shop .shop_event{padding-top:2px; line-height:16px; padding-left:10px;}
+.coupon_shop .shop_event a{color:#333;}
+.coupon_shop .shop_btn{padding-top:4px; height:22px; padding-left:10px;}
+.coupon_text{color:#666; line-height:18px; padding-top:10px;}

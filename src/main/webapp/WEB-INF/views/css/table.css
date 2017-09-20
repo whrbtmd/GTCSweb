@@ -1,0 +1,53 @@
+table, td, th {
+	border: 1px solid black;
+	text-align: left;
+	color: green;
+	font-size: 120%;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	padding: 15px;
+}
+
+#show0 table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#show0 th, td {
+	text-align: left;
+	padding: 8px;
+}
+
+#show0 tr {
+	background-color: #f2f2f2
+}
+
+#show0 th {
+	background-color: #4CAF50;
+	color: white;
+}
+
+#show1 table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#show1 th, td {
+	text-align: left;
+	padding: 8px;
+}
+
+#show1 tr {
+	background-color: #f2f2f2
+}
+
+#show1 th {
+	background-color: #4CAF50;
+	color: white;
+}

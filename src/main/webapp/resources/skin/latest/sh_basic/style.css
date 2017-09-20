@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* SIR 지운아빠 */
+
+/* 새글 스킨 (latest) */
+.sh_lt_pc {float:left;margin-left:0px}
+.sh_lt {position:absolute;top:35px;width:247px;height:50px; font-family: '맑은 고딕', 'Nanum Gothic', '나눔 고딕', '돋움';}
+.sh_lt ul {margin:0;padding:0;list-style:none;clear:both;padding-top:20px;overflow:hidden;}
+.sh_lt li {padding:0px 0;*padding:0px 0;background:url('/sh_img/index/m0101_arrow.png') 0 11px no-repeat;overflow:hidden;}
+.sh_lt li a {color:#cfe1ad;line-height:1.5em;letter-spacing:0;font-size:1.1em;}
+/*.sh_lt .lt_title {display:block;padding:10px 0 8px}
+.sh_lt .lt_more {position:absolute;top:10px;right:0}*/
+.sh_lt .cnt_cmt {display:inline-block;margin:0 0 0 3px;font-weight:bold}
+
+.sh_date {font-size:0.9em; float:right; color:#cfe1ad;margin-top:-15px;width:75px;}
+.sh_notice {width:70%;font-size:1em; float:left;}
+
+.sh_nodata {width:100%;font-size:1em;text-align:center;color:#cfe1ad;margin-top:35px;}

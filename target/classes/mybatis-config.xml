@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="yjc.wdb.spring.domain.MemberBean" alias="member" />
+		<typeAlias type="yjc.wdb.spring.domain.TeamBean" alias="team" />
+		<typeAlias type="yjc.wdb.spring.domain.GroupBean" alias="group" />
+		<typeAlias type="yjc.wdb.spring.domain.ProductBean" alias="product" />
+		<typeAlias type="yjc.wdb.spring.domain.BoardBean" alias="board" />
+		<typeAlias type="yjc.wdb.spring.domain.CartListBean" alias="cart" />
+		<typeAlias type="yjc.wdb.spring.domain.FoodBean" alias="food"/>
+		<typeAlias type="yjc.wdb.spring.domain.PurchaseBean" alias="purchase"/>
+		<typeAlias type="yjc.wdb.spring.domain.CalendarBean" alias="Calendar" />
+		<typeAlias alias="shopVO" type="yjc.wdb.spring.domain.ShopVO" />
+		<typeAlias alias="scoreVO" type="yjc.wdb.spring.domain.ScoreVO" />
+		<typeAlias alias="orderVO" type="yjc.wdb.spring.domain.OrderVO" />
+		<typeAlias alias="cartVO" type="yjc.wdb.spring.domain.CartVO" />
+		<typeAlias alias="TestgetImages" type="yjc.wdb.spring.domain.TestgetImages" />
+		<typeAlias alias="buyVO" type="yjc.wdb.spring.domain.buyVO" />
+		<typeAlias alias="admVO" type="yjc.wdb.spring.domain.admVO" />
+		<typeAlias alias="recordVO" type="yjc.wdb.spring.domain.recordVO" />
+		
+	
+	</typeAliases>
+	<!-- <mappers>
+		<mapper resource="maps/CalendarMapper.xml" />
+	</mappers> -->
+</configuration>

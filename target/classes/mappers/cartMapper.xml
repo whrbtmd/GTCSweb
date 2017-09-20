@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="yjc.wdb.mapper.cartMapper">
+ 
+ <insert id="registc">
+	 insert into cart(id, pname, pprice, pimage) 
+	 values(#{id}, #{pname}, #{pprice}, #{pimage})
+ </insert>
+ 
+ <select id="readc" resultType="cart">
+	 select * from cart
+	 where id = #{id}
+ </select>
+ 
+ <update id="modifyc">
+ 	update cart set pname=#{pname}, pprice=#{pprice}
+ 	where id = #{id}
+ </update>
+ 
+ <delete id="removec">
+ 	delete from cart where id = #{id}
+ </delete>
+ 
+ <select id="listAllc" resultType="cart">
+	 select * from cart
+	 order by id desc
+ </select>
+ 	<insert id="write">
+		INSERT INTO cart (userid, quantity, shop_no)
+		VALUES (#{userid},#{quantity},#{shop_no})
+	</insert>
+	<select id="selectList" resultType="cartVO">
+		select g.bno, c.quantity, g.name, g.price, c.shop_no, c.cno  from cart c, goods g
+		where c.shop_no = g.bno and c.userid like #{userid}
+		order by c.cno
+	</select>
+	    <delete id="delete" parameterType="int">
+      delete from cart where cno=#{number}
+    </delete>
+ 
+ </mapper> 

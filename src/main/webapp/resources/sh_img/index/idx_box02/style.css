@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+#idx_box02_tit { padding-bottom:20px; }
+#idx_box02_tit p { font-size:26px;color:#9fa192;padding-top:10px; }
+#idx_box02_tit strong { color:#c5c8b5 }
+
+#jqb_object {position:relative;width:222px;height:350px;overflow:hidden;}
+#jqb_object .jqb_slide{position:absolute;width:670px;height:470px;}
+
+#jqb_object .jqb_bar{position:absolute;width:60px;left:0;bottom:0}
+#jqb_object .jqb_btn{width:25px;height:19px;margin:0 3px 0 0;float:left;cursor:pointer;}
+#jqb_object .jqb_btn_next{background-image:url(/sh_img/index/idx_box02/next.png);}
+#jqb_object .jqb_btn_prev{background-image:url(/sh_img/index/idx_box02/prev.png);}
+
+

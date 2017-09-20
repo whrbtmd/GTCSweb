@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0 //EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yjc.wdb.mapper.memberMapper">
+
+
+
+	<insert id="registm" parameterType="yjc.wdb.spring.domain.MemberBean">
+		insert into
+		tbl_member(userid, userpw, username, email, address, member, phone)
+		values
+		(#{userid}, #{userpw}, #{username}, #{email}, #{address},
+		#{member}, #{phone})
+
+	</insert>
+
+	<insert id="registcd" parameterType="yjc.wdb.spring.domain.MemberBean">
+		insert into
+		tbl_member(userid, userpw, username, email, address, member, phone)
+		values
+		(#{userid}, #{userpw}, #{username}, #{email}, #{address},
+		#{member}, #{phone})
+
+	</insert>
+
+
+
+	<select id="listm" resultType="member">
+		select * from tbl_member where
+		member = 'golfer'
+	</select>
+
+	<select id="listcd" resultType="member">
+		select * from tbl_member where
+		member = 'caddie'
+	</select>
+	<select id="listcdd" resultType="member">
+		<!-- select * from tbl_member -->
+		select userid, username, phone from tbl_member 
+		where member='caddie' and
+		 userid not in (select cname from cgroup where cname is not null group by cname)
+	</select>
+	<select id="readcd" resultType="member">
+		select * from tbl_member where
+		userid = #{userid}
+	</select>
+
+	<select id="readge" resultType="member">
+		select * from tbl_member where
+		userid = #{userid}
+	</select>
+
+	<select id="check" resultType="String">
+		select userpw from tbl_member
+		where userid = #{userid}
+	</select>
+
+	<select id="loginCheck" parameterType="String">
+		select * from tbl_member
+		where userid =#{userid}
+	</select>
+	<update id="modifycd">
+		update tbl_member set userid=#{userid},
+		userpw=#{userpw}, username=#{username}, phone=#{phone},
+		address=#{address}
+		where userid =#{userid}
+	</update>
+	<update id="removecd">
+		delete from tbl_member where userid = #{userid}
+	</update>
+
+	<update id="modifyge">
+		update tbl_member set userid=#{userid},
+		userpw=#{userpw}, username=#{username}, phone=#{phone},
+		address=#{address}
+		where userid =#{userid}
+	</update>
+	<update id="removege">
+		delete from tbl_member where userid = #{userid}
+	</update>
+
+	<select id="getsearchmember" resultType="yjc.wdb.spring.domain.MemberBean">
+		SELECT userid, username,
+		phone FROM tbl_member WHERE userid LIKE CONCAT('%',
+		#{search}, '%')
+		and
+		member='golfer'
+	</select>
+
+	<select id="selectListkey" resultType="member">
+      <![CDATA[
+         SELECT * FROM tbl_member
+      ]]>
+
+		<if test="searchType != null">
+			<if test="searchType == 'userid'.toString()">
+				and userid like CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="searchType == 'username'.toString()">
+				and username like CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="searchType == 'phone'.toString()">
+				and phone like CONCAT('%', #{keyword}, '%')
+			</if>
+		</if>
+
+	</select>
+
+
+
+
+
+
+	<insert id="regist" parameterType="yjc.wdb.spring.domain.TeamBean">
+		insert into team(tname,
+		tphone)
+		values(#{tname}, #{tphone})
+	</insert>
+
+	<select id="teamAddList" resultType="team">
+		select tname
+		from team
+		where
+		nno=(select max(nno) from team)
+	</select>
+
+	<select id="cal" resultType="int">
+
+ select count(*) from calendar where startday >=(SELECT current_date())
+
+	</select>
+
+
+	<select id="selectOne" resultType="member">
+		select *from tbl_member
+		where
+		userid =#{value}
+	</select>
+
+	<insert id="pinsert">
+		insert into reserPur(cno, userid, startday)
+		values (#{cno}, #{userid}, #{startday})
+	</insert>
+
+	<insert id="ginsert">
+		insert into cgroup(cname, gname1, gname2, gname3,
+		gname4, play, cdnum)
+		values(#{cname}, #{gname1}, #{gname2}, #{gname3},
+		#{gname4}, #{play}, #{cdnum})
+	</insert>
+
+	<!-- <select id="glist" resultType="group"> select * from cgroup where cname='NULL' 
+		</select> -->
+
+	<select id="glist" resultType="group">
+		select g.cid, c.userid, c.startday, c.time from calendar c, cgroup g where c.cid=g.cid and g.cname is null order by startday
+	</select>
+	
+	<select id="selectCid" resultType="int">
+		select max(cid) from cgroup
+	</select>
+	
+	<select id="group" resultType="group">
+		select * 
+		from cgroup 
+		where cid = #{cid}
+	</select>
+	
+	<update id="gmodify" >
+		update cgroup set cname=#{cname}, cdnum=#{cdnum}, play=1
+		where cid =#{cid}
+	</update>
+
+
+</mapper>

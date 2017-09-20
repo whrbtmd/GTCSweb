@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+
+#slideshow {position:absolute; width:2000px; height:1000px; margin:0 auto;left:50%;margin-left:-1000px;}
+#slides {position:absolute; width:2000px; height:1000px; list-style:none; overflow:auto;}
+#slides li {width:2000px; height:1000px}
+
+/*
+.pagination {position:absolute;right:1516px;top:450px;height:25px;z-index:9999;border-radius:20px;behavior:url(/css/js/PIE.htc);}
+.pagination li {float:left;width:13px;height:13px;cursor:pointer; background:#c6c9cc;margin:0 8px 0 0;text-align:center;z-index:2000;border-radius:20px;behavior:url(/css/js/PIE.htc);}
+.pagination li:hover {background:#ffffff;z-index:2000;border-radius:20px;behavior:url(/css/js/PIE.htc);}
+li.current {background:#ffffff;z-index:2000;border-radius:20px;behavior:url(/css/js/PIE.htc);}
+
+li#content {width:464px; height:270px; padding:15px 18px 15px 18px; background:#fff}
+#content h1 {font:22px Georgia,Verdana; margin-bottom:15px; color:#036}
+*/

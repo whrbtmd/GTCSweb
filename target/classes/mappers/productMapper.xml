@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0 //EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="yjc.wdb.persistence.ProductDAO">
+
+	<insert id="insertNewProduct" parameterType="yjc.wdb.spring.domain.ProductBean">
+		insert into product(id, pname, pcategory, pprice, pmaker, pcontext, pimage) values
+		(#{id}, #{pname}, #{pcategory}, #{pprice}, #{pmaker}, #{pcontext}, #{pimage})
+		
+	</insert>
+	
+	<select id="listAll" resultType="product">
+		select * from product
+	</select>
+
+	<select id="list" resultType="product">
+		select * from product
+		where pcategory = #{pcategory}
+	</select>
+	
+	<!-- 
+	<select id="listDrivers" resultType="product">
+		select * from product
+		where pcategory ='DRIVERS'
+	</select>
+	
+	<select id="listHybrids" resultType="product">
+		select * from product
+		where pcategory ='HYBRIDS'
+	</select>
+	
+	<select id="listIronsets" resultType="product">
+		select * from product
+		where pcategory ='IRON SETS'
+	</select> -->
+	
+	<select id="readpro" resultType="product">
+        select
+           *
+        from 
+           product
+        where pnum = #{pnum}
+     </select> 
+
+	<update id="modifypro">
+		update product set pname=#{pname}, pprice=#{pprice}, pmaker=#{pmaker}, pcontext=#{pcontext}
+		where pnum = #{pnum}
+	</update>
+
+	<delete id="removepro">
+		delete from product where pnum = #{pnum}
+	</delete>
+	
+
+  
+</mapper>

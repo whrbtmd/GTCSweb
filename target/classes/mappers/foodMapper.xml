@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+   PUBLIC "-//mybatis.org//DTD Mapper 3.0 //EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+   <mapper namespace="yjc.wdb.mapper.foodMapper">
+
+   <insert id="finsert">
+      insert into food_reservation (pfood_name, plev, pprice, imgfile, psize) 
+      values (#{pfood_name}, #{plev}, #{pprice}, #{imgFileBytes,jdbcType=BLOB}, psize)
+      
+   </insert>
+   
+   <select id="listf" resultType="food">
+      select * 
+      from food_reservation
+   </select>
+   
+   <select id="listd" resultType="food">
+      select * 
+      from food_reservation
+   </select>
+   
+   <select id="readf" resultType="food">
+      select * 
+      from food
+   </select> 
+   
+   <update id="updatef">
+      update food set pfood_name=#{pfood_name}, pprice=#{pprice}
+   </update>
+   
+   <delete id="deletef">
+      delete
+      from food
+   </delete>
+   
+  
+</mapper>

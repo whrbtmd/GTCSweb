@@ -1,0 +1,1120 @@
+					  
+					  
+/* Å×ÀÌºí¿¡ ´ëÇÑ ±âº» ½ºÅ¸ÀÏ Á¤ÀÇ */
+body, tr, textarea, radio 
+{
+    font-family : "µ¸¿ò","±¼¸²", "±¼¸²Ã¼","Dotum" ; 
+    font-size : 12px; 
+    COLOR: #6F6F6F; 
+    border-color:#B8C788; 
+    border-collapse:collapse;
+}
+
+
+.GridView td
+{
+    border-color:#B8C788;
+    border-width:1px;
+    border-style:Solid;
+    border-collapse:collapse;
+}
+
+.GridView th
+{
+    border-color:#B8C788;
+    border-width:1px;
+    border-style:Solid;
+    border-collapse:collapse;
+	padding:10px 0px 6px 0px; 
+}
+
+.hovered td {
+    background: #ddd;
+}
+
+
+select.SelectedInput { color:#9a9a9a; font-size:12px; background-color:#ffffff ;font-family : "µ¸¿ò","±¼¸²", "±¼¸²Ã¼","Dotum" ; padding:0px 3px 0px 3px;}
+
+
+/*
+.sbtn { font:normal 11px/18px  Gulim, Arial, sans-serif; width: 70px; border: 1px solid #999; color:#464646; border-radius: 2px; cursor:pointer; padding-top:3px; background:#fff; letter-spacing:-1px; margin-right:5px; box-shadow:1px 1px #ebebeb; margin-top:3px;}
+
+.gbtn { font:normal 11px/18px  Gulim, Arial, sans-serif; width: 70px; border: 1px solid #000; border-radius: 2px; cursor:pointer; padding-top:3px; letter-spacing:-1px; margin-right:5px; box-shadow:1px 1px #ebebeb; margin-top:3px; background:#666; color:#fff}
+*/
+
+
+.btnStyle{
+	font:normal 11px/18px "µ¸¿ò","Dotum"; 
+	border: 1px solid orange; 
+	color:#464646; 
+	border-radius: 2px; 
+	cursor:pointer; 
+	padding:2px 15px 0px 15px; 
+	background:#FFFFD7; letter-spacing:-1px; 
+	margin-right:5px; box-shadow:1px 1px #ebebeb; 
+}
+
+.btnStyle:hover
+{
+	font:normal 11px/18px  "µ¸¿ò","Dotum"; 
+	border: 1px solid #3E6D8E; 
+	color:#E0EAF1; 
+	border-radius: 3px; 
+	cursor:pointer; 
+	padding:2px 15px 0px 15px; 
+	background:#3E6D8E; letter-spacing:-1px; 
+	margin-right:5px; box-shadow:1px 1px #ebebeb; 
+	
+}
+
+
+.btnExcel
+{
+	font:normal 11px/18px  "µ¸¿ò","Dotum"; 
+	border: 1px solid orange; 
+	color:#464646; 
+	border-radius: 2px; 
+	cursor:pointer; 
+	padding:2px 15px 0px 15px; 
+	background:#E7F8DE; letter-spacing:-1px; 
+	margin-right:5px; box-shadow:1px 1px #ebebeb; 
+}
+
+.btnExcel:hover
+{
+	font:normal 11px/18px  "µ¸¿ò","Dotum"; 
+	border: 1px solid #3E6D8E; 
+	color:#E0EAF1; 
+	border-radius: 3px; 
+	cursor:pointer; 
+	padding:2px 15px 0px 15px; 
+	background:#3E6D8E; letter-spacing:-1px; 
+	margin-right:5px; box-shadow:1px 1px #ebebeb; 
+}
+
+
+
+.btnStyleY{
+
+	font:normal 11px/18px  "µ¸¿ò","Dotum"; 
+	border: 1px solid orange; 
+	color:#464646; 
+	border-radius: 2px; 
+	cursor:pointer; 
+	padding:2px 15px 0px 15px; 
+	background:#F4E082; letter-spacing:-1px; 
+	margin-right:5px; box-shadow:1px 1px #ebebeb; 
+
+}
+
+.btnStyleY:hover
+{
+	font:normal 11px/18px  "µ¸¿ò","Dotum"; 
+	border: 1px solid #3E6D8E; 
+	color:#E0EAF1; 
+	border-radius: 3px; 
+	cursor:pointer; 
+	padding:2px 15px 0px 15px; 
+	background:#3E6D8E; letter-spacing:-1px; 
+	margin-right:5px; box-shadow:1px 1px #ebebeb; 
+}
+
+
+.btnStyleS {   
+
+	font:normal 11px/18px  "µ¸¿ò","Dotum"; 
+	border: 1px solid orange; 
+	color:#464646; 
+	border-radius: 2px; 
+	cursor:pointer; 
+	padding:2px 15px 0px 15px; 
+	background:#fed; letter-spacing:-1px; 
+	margin-right:5px; box-shadow:1px 1px #ebebeb; 
+
+}
+
+
+.btnStyleRed
+{
+
+	font:normal 11px/18px  "µ¸¿ò","Dotum"; 
+	border: 1px solid orange; 
+	color:#464646; 
+	border-radius: 2px; 
+	cursor:pointer; 
+	padding:2px 15px 0px 15px; 
+	background:#fed; letter-spacing:-1px; 
+	margin-right:5px; box-shadow:1px 1px #ebebeb; 
+	
+}
+
+.btnStyleRed:hover
+{
+	font:normal 11px/18px  "µ¸¿ò","Dotum"; 
+	border: 1px solid #3E6D8E; 
+	color:#E0EAF1; 
+	border-radius: 3px; 
+	cursor:pointer; 
+	padding:2px 15px 0px 15px; 
+	background:#3E6D8E; letter-spacing:-1px; 
+	margin-right:5px; box-shadow:1px 1px #ebebeb; 
+}
+
+
+.btnLogout {   
+    cursor:pointer;
+    margin-right:6px;
+    color:#050;
+    background-color:#fed;
+    border-bottom:1px solid #3E6D8E;
+    border-right:1px solid #7F9FB6;
+
+    padding:4px 3px 1.5px 3px;
+    margin:2px 2px 2px 0px;
+    width:auto;
+    overflow:visible;
+
+    text-decoration:none;
+    font-size:11px;
+    line-height:1.3;
+    white-space:nowrap;
+    vertical-align:middle;
+}
+
+
+ 
+
+.aspNetDisabled btnDisable
+{
+	font:normal 11px/18px  Gulim, Arial, sans-serif; 
+	border: 1px solid #3E6D8E; 
+	color:#A0A0A0; 
+	border-radius: 3px; 
+	cursor:pointer; 
+	padding:2px 15px 0px 15px; 
+	background:#F2F2F2; letter-spacing:-1px; 
+	margin-right:5px; box-shadow:1px 1px #ebebeb; 
+	
+}
+
+
+.btnDisable
+{
+	font:normal 11px/18px  Gulim, Arial, sans-serif; 
+	border: 1px solid #3E6D8E; 
+	color:#A0A0A0; 
+	border-radius: 3px; 
+	cursor:pointer; 
+	padding:2px 15px 0px 15px; 
+	background:#F2F2F2; letter-spacing:-1px; 
+	margin-right:5px; box-shadow:1px 1px #ebebeb; 
+	
+}
+
+
+
+
+.post-tag{cursor:pointer;
+    margin-right:6px;
+    color:#3E6D8E;
+    background-color:#E0EAF1;
+    border-bottom:1px solid #3E6D8E;
+    border-right:1px solid #7F9FB6;
+    padding:3px 4px 3px 4px;
+    margin:2px 2px 2px 0;
+    text-decoration:none;
+    font-size:90%;
+    line-height:1.2;
+    white-space:nowrap;
+}
+.post-tag:hover
+{
+    cursor:pointer;
+    background-color:#3E6D8E;
+    color:#E0EAF1;
+    border-bottom:1px solid #37607D;
+    border-right:1px solid #37607D;
+    text-decoration:none;
+}
+
+input[type=text] {
+	padding:3px; 
+	border:1px solid #ccc;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+	font-size:12px; 
+	font-family : "µ¸¿ò","±¼¸²", "±¼¸²Ã¼","Dotum";
+	color:#6F6F6F;
+	vertical-align:middle;
+}
+input[type=text]:focus {border-color:orange; }
+
+
+
+#btnHidden{
+	display:none;
+}
+#btnHidden:hover{
+	display:none;
+}
+
+
+
+
+/*
+
+input[type=submit] 
+{
+	border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 4px;
+    padding:6px 10px 3px 10px;
+    margin:4px 4px 4px 4px;
+}
+
+input[type=submit]:hover 
+{
+	border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 4px;
+    color:White;
+}
+
+
+input[type=button] 
+{
+	border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 4px;
+    padding:6px 10px 3px 10px;
+    margin:4px 4px 4px 4px;}
+
+input[type=button]:hover 
+{
+	border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 4px;
+    color:White;
+}
+
+*/
+
+
+/* ÀÌ¹ÌÁö¿¡ ´ëÇÑ ±âº» ½ºÅ¸ÀÏ Á¤ÀÇ */	
+img {	border:none; }					  
+
+
+
+
+
+/* ------------ FORM ----------- */
+/* -- ±âº» ÆûÇÊµå ½ºÅ¸ÀÏ -- */
+select  { 
+/*
+	color:#6F6F6F; 
+	font-size:12px; 
+	background-color:#ffffff ;
+	font-family : "µ¸¿ò","±¼¸²", "±¼¸²Ã¼" ; 
+	padding:0px 0px 0px 2px;
+	border: 1;
+*/
+    font-family : "µ¸¿ò","±¼¸²", "±¼¸²Ã¼","Dotum" ; 
+	font-size:12px; 
+	background-color:#ffffff ;
+	color:#6F6F6F; 
+
+	border: 1px solid #ccc;
+    border-radius: 1px;
+    overflow: hidden;
+    background: #fafafa;
+	padding:1px 0px 1px 0px;
+}
+
+select:focus  { 
+	border-color:orange;
+	border:1px solid #ccc;
+}
+
+
+
+
+
+.select_search  { color:#6F6F6F; font-size:11px; background-color:#ffffff ;font-family : "µ¸¿ò","±¼¸²", "±¼¸²Ã¼" ; padding:0 3px 0 3px;}
+
+/*
+input   { color:#6F6F6F; background-color:#FFFFFF ; border:1px solid #CFCFCF; font-size:12px; font-family : "µ¸¿ò","±¼¸²", "±¼¸²Ã¼" ;vertical-align:middle; }
+*/
+
+
+input.jumin2   { color:#FFFFFF; background-color:#FFFFFF ; border:0px solid #CFCFCF; font-size:12px; font-family : "µ¸¿ò","±¼¸²", "±¼¸²Ã¼","Dotum" ;vertical-align:middle; }
+
+textarea{ 	border:1px solid #CFCFCF;
+			line-height: 17px;
+			padding:0 5px 0 5px;
+			background-color:#FFFFFF;
+}
+
+
+/* -- ¼­ºê¿¡ »ç¿ëÇÏ´Â ÆûÇÊµå ½ºÅ¸ÀÏ -- */
+.input_blue   { color:#336699; background-color:#FFFFFF ; border:1px solid #D7DDDD; font-family : "µ¸¿ò","±¼¸²", "±¼¸²Ã¼" ; }
+.input_source   { padding:2px 0px 0px 0px; font-size:11px; color:#336699; background-color:#f6f6f6 ; border:1px solid #D7DDDD; font-family : "µ¸¿ò","±¼¸²", "±¼¸²Ã¼" ; }
+.input_button   { border:0px }
+
+.radio      { height: 15px; border:0px  }
+.radio02      { height: 15px; background-color:#F9F9F9; border:1px solid #F9F9F9;  }
+.radio03      { height: 15px; background-color:#FAF5FA; border:0px  }
+
+
+.checkbox   { height: 15px; background-color:#FFFFFF; border:1px solid #FFFFFF;  }
+.checkbox02   { height: 15px; background-color:#EDF1F2; border:1px solid #EDF1F2;  }
+.checkbox_main   { height: 15px; background-color:#ECFBF7; border:1px solid #ECFBF7;  }
+
+/* ·Î±×ÀÎ ÆûÇÊµå ½ºÅ¸ÀÏ */
+.input_login_id   { color:#6F6F6F; background-color:#FFFFFF ; border:1px solid #E0E0E0; font-family : "µ¸¿ò","±¼¸²", "±¼¸²Ã¼" ; padding:0px 0px 0px 3px ; }
+.input_login_pw   { color:#6F6F6F; background-color:#FFFFFF ; border:1px solid #E0E0E0; font-family : "µ¸¿ò","±¼¸²", "±¼¸²Ã¼" ; padding:0px 0px 0px 3px ; }
+
+
+/* .input_login_id   { color:#6F6F6F; background-color:#FFFFFF ; border:1px solid #E0E0E0; font-family : "µ¸¿ò","±¼¸²", "±¼¸²Ã¼" ; padding:0 0 0 3 ; background-image:url(/images/portal/_common/top_login_id.gif); background-repeat:no-repeat;background-position:center; onkeydown:return ch();  onmousedown:return ch(); }
+.input_login_pw   { color:#6F6F6F; background-color:#FFFFFF ; border:1px solid #E0E0E0; font-family : "µ¸¿ò","±¼¸²", "±¼¸²Ã¼" ; padding:0 0 0 3 ; background-image:url(/images/portal/_common/top_login_pw.gif); background-repeat:no-repeat;background-position:center; onkeydown:return ch();  onmousedown:return ch(); }*/
+
+
+
+
+/* -- ¸ÞÀÎ¿¡ »ç¿ëÇÏ´Â ÆûÇÊµå ½ºÅ¸ÀÏ -- */
+.select_relative  { color:#555555; font-size:12px; background-color:#FFFFFF ;font-family : "µ¸¿ò","±¼¸²", "±¼¸²Ã¼" ; padding:0px 3px 0px 3px;}
+
+
+
+
+
+
+
+/* ------------------- LINK ------------------ */
+/* ÀÏ¹ÝÀûÀÎ ÅØ½ºÆ® ·Ñ¿À¹ö ¹× ¸µÅ© */
+
+a:link     {font-family: "µ¸¿ò","±¼¸²", "±¼¸²Ã¼"; font-size: 9pt; 	color: #6F6F6F;	text-decoration: none; }
+a:visited  {font-family: "µ¸¿ò","±¼¸²", "±¼¸²Ã¼"; font-size: 9pt; 	color: #6F6F6F;	text-decoration: none; }
+a:hover    {font-family: "µ¸¿ò","±¼¸²", "±¼¸²Ã¼"; font-size: 9pt; 	color: #222222;	text-decoration: underline; }
+
+
+
+/* Å×ÀÌºí : ±âº»Å×ÀÌºí, Ç¥·Î »ç¿ëÇÒ Å×ÀÌºí */
+.hd_table 
+	{
+	width:650px;
+	margin-bottom:10px;
+	font-family : "µ¸¿ò", "±¼¸²","±¼¸²Ã¼";
+	font-size : 12px;
+	}
+.hd_table_list
+	{
+	width:100%;
+	border-bottom:1px #B8C788 solid; 
+	border-left:1px #B8C788 solid;
+	border-right:1px #B8C788 solid;
+	border-top:1px #B8C788 solid;
+	border-collapse:collapse;
+	background-color:White;
+	font-family : "µ¸¿ò", "±¼¸²","±¼¸²Ã¼";
+	font-size : 12px;
+	}
+
+.hd_table_list_b
+	{
+	width:100%;
+	border-bottom:0.8px #B8C788 solid; 
+	border-left:0.8px #B8C788 solid;
+	border-right:0.8px #B8C788 solid;
+	border-top:0.8px #B8C788 solid;
+	margin-bottom:5px;
+	border-collapse:collapse;
+	}
+
+.hd_table_list_big
+	{
+	width:1075px;
+	border-bottom:1px #B8C788 solid; 
+	margin-bottom:10px;
+	border-left:1px #B8C788 solid;
+	border-right:1px #B8C788 solid;
+	border-top:1px #B8C788 solid;
+	border-collapse:collapse;
+	background-color:White;
+	font-family : "µ¸¿ò", "±¼¸²","±¼¸²Ã¼";
+	font-size : 12px;
+	}
+
+.hd_table_list_sub 
+	{
+	width:620px;
+	border-bottom:1px #B8C788 solid; 
+	margin-bottom:10px;
+	border-left:1px #B8C788 solid;
+	border-right:1px #B8C788 solid;
+	border-top:1px #B8C788 solid;
+	border-collapse:collapse;
+	font-family : "µ¸¿ò", "±¼¸²","±¼¸²Ã¼";
+	font-size : 12px;
+	background-color:White;
+	}
+
+
+.hd_table_list_lms 
+	{
+	width:700px;
+	border-color:Gray;
+	border-bottom:1px #B8C788 solid; 
+	margin-bottom:10px;
+	border-left:1px #B8C788 solid;
+	border-right:1px #B8C788 solid;
+	border-top:1px #B8C788 solid;
+	border-collapse:collapse;
+	font-family : "µ¸¿ò", "±¼¸²","±¼¸²Ã¼";
+	font-size : 12px;
+	background-color:White;
+	}
+		
+	
+
+.GridView_big
+	{
+		width:1100px;
+		border-bottom:1px #B8C788 solid; 
+		margin-bottom:10px;
+		border-collapse:collapse;
+		background-color:White;
+    	font-family : "µ¸¿ò", "±¼¸²","±¼¸²Ã¼";
+		font-size : 12px;
+	}
+
+.GridView
+	{
+		width:100%;
+    	font-family : "µ¸¿ò", "±¼¸²","±¼¸²Ã¼";
+		font-size : 12px;
+	}
+
+
+.GridView_1
+	{
+		width:1000px;
+		border-collapse: collapse;
+		border: 1px solid #B8C788;
+ 		border-bottom:1px #B8C788 solid; 
+		margin-bottom:10px;
+		border-collapse:collapse;
+		background-color:White;
+    	font-family : "µ¸¿ò", "±¼¸²","±¼¸²Ã¼";
+		font-size : 12px;
+	}
+	
+.GridView_print
+	{
+		width:800px;
+		border-bottom:1px #B8C788; 
+		margin-bottom:10px;
+		border-collapse:collapse;
+		background-color:White;
+    	font-family : "µ¸¿ò", "±¼¸²","±¼¸²Ã¼";
+		font-size : 11px;
+	}
+
+.GridView_lms
+	{
+		width:730px;
+		border-bottom:1px #B8C788 solid; 
+		margin-bottom:10px;
+		border-collapse:collapse;   
+		background-color:White;
+		font-family : "µ¸¿ò", "±¼¸²","±¼¸²Ã¼";
+		font-size : 12px;
+
+	}
+
+.GridView_lms_small
+	{
+		width:500px;
+		border-bottom:1px #B8C788 solid; 
+		margin-bottom:10px;
+		border-collapse:collapse;
+		background-color:White;
+		font-family : "µ¸¿ò", "±¼¸²","±¼¸²Ã¼";
+		font-size : 12px;
+	}
+
+.GridView_lms_small2
+	{
+		width:500px;
+		border-bottom:1px #B8C788 solid; 
+		margin-bottom:10px;
+		border-collapse:collapse;
+		background-color:White;
+		font-family : "µ¸¿ò", "±¼¸²","±¼¸²Ã¼";
+		font-size : 12px;
+	}
+
+
+.GridView_Sub
+	{
+		width:510px;
+		border-bottom:1px #B8C788 solid; 
+		margin-bottom:10px;
+		border-collapse:collapse;
+		background-color:White;
+    	font-family : "µ¸¿ò", "±¼¸²","±¼¸²Ã¼";
+		font-size : 12px;
+	}
+
+
+/* .hd_line {background:url() #B8C788; height:2px;}
+*/
+.hd_line { border-bottom:2px solid #B8C788; background-color:#ffffff;}
+
+/* Ç¥ - Ç×¸ñ */
+.hd_item
+	{
+	border-bottom:1px #cccccc solid;
+	border-right:1px #cccccc solid;
+	background:url() #f7f7f7;
+	text-align:right;
+	color:#000000;
+	padding:3px 3px 3px 3px;
+	}
+.hd_item_left
+	{
+	border-bottom:1px #cccccc solid;
+	border-right:1px #cccccc solid;
+	background:url() #FAFAFA;
+	text-align:center;
+	color:#6F6F6F;
+	padding:3px 3px 1px 3px;
+	}
+.hd_item_left1
+	{
+	padding:4px;
+	text-align:center;
+	color:#6F6F6F;
+	padding:3px 3px 3px 3px;
+	}
+.hd_item_right
+	{
+	border-bottom:1px #cccccc solid;
+	background:url() #F8FAF2;
+	text-align:center;
+	color:#6F6F6F;
+	padding:3px 3px 3px 3px;
+	}
+/* Ç¥ - ÄÁÅÙÃ÷ */
+.hd_cont1
+	{
+	text-align:left;
+	color:#777777;
+	padding:3px 3px 3px 3px;
+	}
+.hd_cont2
+	{
+    text-align:left;
+	color:#5F8708;
+	padding:3px 3px 3px 3px;
+	}
+.hd_cont_left
+	{
+	border-bottom:1px #cccccc solid;
+	border-right:1px #cccccc solid;
+	text-align:center;
+	color:#6F6F6F;
+	padding:3px 3px 3px 3px;
+	}
+.hd_cont_left1
+	{
+	border-bottom:1px #cccccc solid;
+	border-right:1px #cccccc solid;
+	color:#6F6F6F;
+	text-align:left;
+	padding:3px 3px 3px 3px;
+	}
+
+.hd_cont_center1
+	{
+	border-bottom:1px #cccccc solid;
+	border-right:1px #cccccc solid;
+	text-align:center;
+	color:#6F6F6F;
+	padding:3px 3px 3px 3px;
+	}
+
+.hd_cont_center
+	{
+	border-bottom:1px #cccccc solid;
+	text-align:center;
+	color:#6F6F6F;
+	padding:3px 3px 3px 3px;
+	}
+.hd_cont_right
+	{
+	border-bottom:1px #cccccc solid;
+	text-align:center;
+	color:#6F6F6F;
+	padding:3px 3px 3px 3px;
+	}
+.hd_cont_right1
+	{
+	border-bottom:1px #cccccc solid;
+	text-align:left;
+	color:#6F6F6F;
+	padding:3px 3px 3px 3px;
+	}
+
+
+/* 2005³â 6¿ù 8ÀÏ - ¹öÆ° */
+/* background - ¹öÆ°¹è°æ */
+.hd_tbl_btn_left {background:url(/image/hd_tbl_btn_left.gif) no-repeat left top; width:20px; height:21px}
+.hd_tbl_btn_center {background:url(/image/hd_tbl_btn_center.gif) repeat-x left top; height:21px; padding:4px 0 0 0; font-weight:bold;}
+.hd_tbl_btn_right {background:url(/image/hd_tbl_btn_right.gif) no-repeat right top; width:10px; height:21px}
+
+.hd_tbl_btn_center a:link {text-decoration:none; color:#ffffff;}
+.hd_tbl_btn_center a:hover {text-decoration:none; color:#ffffff;}
+.hd_tbl_btn_center a:visited {text-decoration:none; color:#ffffff;}
+
+
+
+/* ajax ´Þ·ÂÄÜÆ®·Ñ ½ºÅ¸ÀÏ*/
+.CalendarStyle .ajax__calendar_container   {    background-color: #e2e2e2;     border:solid 1px #cccccc;}.CalendarStyle .ajax__calendar_header  {    background-color: #ffffff;     margin-bottom: 4px;}.CalendarStyle .ajax__calendar_title,.CalendarStyle .ajax__calendar_next,.CalendarStyle .ajax__calendar_prev    {    color: #004080;     padding-top: 3px;}.CalendarStyle .ajax__calendar_body    {    background-color: #e9e9e9;     border: solid 1px #cccccc;}.CalendarStyle .ajax__calendar_dayname {    text-align:center;     font-weight:bold;     margin-bottom: 4px;     margin-top: 2px;}.CalendarStyle .ajax__calendar_day {    text-align:center;}.CalendarStyle .ajax__calendar_hover .ajax__calendar_day,.CalendarStyle .ajax__calendar_hover .ajax__calendar_month,.CalendarStyle .ajax__calendar_hover .ajax__calendar_year,.CalendarStyle .ajax__calendar_active  {    color: #004080;     font-weight: bold;     background-color: #ffffff;}.CalendarStyle .ajax__calendar_today   {    font-weight:bold;}.CalendarStyle .ajax__calendar_other,.CalendarStyle .ajax__calendar_hover .ajax__calendar_today,.CalendarStyle .ajax__calendar_hover .ajax__calendar_title {    color: #bbbbbb;}
+
+/************ MaskedEdit Related Styles ***********************/
+.MaskedEditFocus
+{
+    background-color: #ffffcc;
+    color: #000000;
+}
+.MaskedEditMessage
+{
+	color: #ff0000;
+	font-weight: bold;
+}
+.MaskedEditError
+{
+    background-color: #ffcccc;
+}
+.MaskedEditFocusNegative
+{
+    background-color: #ffffcc;
+    color: #ff0000;
+}
+.MaskedEditBlurNegative
+{
+    color: #ff0000;
+}
+
+.MyCalendar .ajax__calendar_container {
+    border:1px solid #646464;
+    background-color: lemonchiffon;
+    color: red;
+}
+.MyCalendar .ajax__calendar_other .ajax__calendar_day,
+.MyCalendar .ajax__calendar_other .ajax__calendar_year {
+    color: black;
+}
+.MyCalendar .ajax__calendar_hover .ajax__calendar_day,
+.MyCalendar .ajax__calendar_hover .ajax__calendar_month,
+.MyCalendar .ajax__calendar_hover .ajax__calendar_year {
+    color: black;
+}
+.MyCalendar .ajax__calendar_active .ajax__calendar_day,
+.MyCalendar .ajax__calendar_active .ajax__calendar_month,
+.MyCalendar .ajax__calendar_active .ajax__calendar_year {
+    color: black;
+    font-weight:bold;
+}
+
+
+/*ajax ¼öÁ¤¾÷µ¥ÀÌÆ®½Ã ÇÁ·Î¼¼½º*/
+#UpdateProgressTable{
+      position:absolute;
+      z-index:100;
+      top:100px;
+      margin:0px;
+      left:350px;
+      background-color:#FAFAFA;
+      border-width:0px;
+      border-style:None;
+      font-family:"µ¸¿ò:±¼¸²";
+/*      filter:progid:DXImageTransform.Microsoft.Shadow(color=#ffffff, Direction=0, Strength=0)alpha(Opacity=60); */
+}
+
+.HeaderFreez{
+/*    position:relative ;
+    top:expression(this.offsetParent.scrollTop);
+    z-index: 10;
+*/
+}
+
+
+
+/*
+------------------------------------------------------------------------------------------------------
+
+ * Sexy Buttons
+ * 
+ * DESCRIPTION	
+ * 	Sexy, skinnable HTML/CSS buttons with icons.
+ * 
+ * PROJECT URL: 
+ * 	http://code.google.com/p/sexybuttons/
+ * 
+ * AUTHOR:
+ * 	Richard Davies
+ * 	http://www.richarddavies.us
+ * 	Richard@richarddavies.us
+ * 
+ * VERSION:
+ * 	1.0
+ * 
+ * LICENSE:
+ * 	Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+ * 	Creative Commons 3.0 Attribution  (http://creativecommons.org/licenses/by/3.0/)
+ * 
+ * CREDITS
+ * 	Inspired by, derived from, and thanks to:
+ * 	http://www.p51labs.com/simply-buttons-v2/
+ * 	http://www.oscaralexander.com/tutorials/how-to-make-sexy-buttons-with-css.html
+ * 	http://www.zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba
+ * 	http://www.elctech.com/snippets/make-your-buttons-look-super-awesome
+ * 
+ * USAGE:
+ * 	Simply add class="sexybutton [skin]" to a <button> or <a> element and wrap the label text with double <span>s.
+ * 	You can optionally add a "silk" icon to the button text by using a third <span> with class to identify the icon.   
+ * 
+ * EXAMPLE: 
+ * 	<button id="btn1" class="sexybutton" name="btn1" type="submit" value="Submit">
+ * 		<span><span><span class="ok">Submit</span></span></span>
+ * 	</button>
+ */
+
+
+/* 
+ *	Generic styles for all Sexy Buttons
+ */
+
+.sexybutton {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	font: 12px "µ¸¿ò","Helvetica Neue", Helvetica, Arial, clean, sans-serif;
+	text-decoration: none;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.20);
+	background: none;
+	border: none;
+	white-space: nowrap;
+	cursor: pointer;
+	user-select: none;
+	-moz-user-select: none;
+	
+	/* Fix extra width padding in IE */
+	_width: 0;
+	overflow: visible;
+}
+
+.sexybutton span {
+	display: block;						/* Prevents :active from working in IE--oh well! */
+	height: 24px;
+	padding-right: 12px;
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+.sexybutton span span {
+	padding-right: 0;
+	padding-left: 12px;
+	line-height: 24px;
+	background-position: left top;
+}
+
+.sexybutton span span span {
+	padding-left: 21px;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position: left center;
+	/* IE6 still requires a PNG transparency fix */ 
+	/* _background-image: none;		Or just hide icons from the undeserving IE6 */
+	/* _padding-left: 0;					Or just hide icons from the undeserving IE6 */
+}
+
+.sexybutton span span span.after {
+	padding-left: 0px;
+	padding-right: 21px;
+	background-position: right center;
+	/* IE6 still requires a PNG transparency fix */ 
+	/* _padding-right: 0;					Or just hide icons from the undeserving IE6 */
+}
+
+.sexybutton:hover span {
+	background-position: right center;
+}
+
+.sexybutton:hover span span {
+	background-position: left center;
+}
+
+.sexybutton:active span {
+	background-position: right bottom;
+}
+
+.sexybutton:active span span {
+	background-position: left bottom;
+}
+
+.sexybutton:active span span span {
+	background-position: left center;
+}
+
+.sexybutton:active span span span.after {
+	background-position: right center;
+}
+
+.sexybutton img {
+	margin-right: 5px;
+	vertical-align: text-top;
+	/* IE6 Hack */
+	_margin-top: 4px;
+	_vertical-align: text-bottom;
+	/* IE6 still requires a PNG transparency fix */ 
+	/* _display: none;		Or just hide icons from the undeserving IE6 */
+}
+
+.sexybutton img.after {
+	margin-right: 0;
+	margin-left: 5px;
+	/* IE6 still requires a PNG transparency fix */ 
+	/* _margin-left: 0;		Or just hide icons from the undeserving IE6 */
+}
+
+.sexybutton.sexymedium	{ font-size: 15px; }
+.sexybutton.sexylarge	{ font-size: 18px; }
+
+
+/*
+ * Button Skins
+ * 
+ * Additional skins can be added below. The images/skins/ButtonTemplate.psd can be used to create new skins.
+ * Prefix the skin name with "sexy" to avoid any potential conflicts with other class names. 
+ */
+
+/* Silver Button Skin (the default skin) */
+
+.sexybutton,
+.sexybutton.sexysilver {
+	color: #666;
+}
+	
+.sexybutton:hover,
+.sexybutton.sexysilver:hover {
+	color: #333;
+}
+	
+.sexybutton span,
+.sexybutton.sexysilver span {
+	background-image: url(../img/button_right.gif);
+}
+
+.sexybutton span span,
+.sexybutton.sexysilver span span {
+	background-image: url(../img/button_left.gif);
+}
+
+/* Orange Button Skin */
+
+.sexybutton.sexyorange,
+.sexybutton.sexyorange:hover {
+	color: white;
+}
+	
+.sexybutton.sexyorange span {
+	background-image: url(../img/button_right_orange.gif);
+}
+
+.sexybutton.sexyorange span span {
+	background-image: url(../img/button_left_orange.gif);
+}
+
+/* Yellow Button Skin */
+
+.sexybutton.sexyyellow,
+.sexybutton.sexyyellow:hover {
+	color: #994800;
+}
+	
+.sexybutton.sexyyellow span {
+	background-image: url(../img/button_right_yellow.gif);
+}
+
+.sexybutton.sexyyellow span span {
+	background-image: url(../img/button_left_yellow.gif);
+}
+
+
+/* 
+ * Simple Skin Buttons
+ */
+
+.sexybutton.sexysimple { 
+	position: relative; 
+	padding: 5px 10px 5px;
+	font: inherit;
+	font-size: 13px;
+	font-style: normal; 
+	font-weight: bold; 
+	color: #fff;
+	line-height: 1; 
+	background-image: url(../img/awesome-overlay-sprite.png);
+	background-repeat: repeat-x;
+	background-position: 0 0;
+	
+	/* Special effects */
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25), -2px 0 1px rgba(0,0,0,0.25); 
+	border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5); 
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+	
+	/* IE only stuff */
+	border-bottom: 1px solid transparent\9;
+	_background-image: none;
+	
+	/* Cross browser inline block hack - http://blog.mozilla.com/webdev/2009/02/20/cross-browser-inline-block/ */
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+	*display: inline !important;
+	position: relative;
+	
+	/* Force hasLayout in IE */
+	zoom: 1;
+	
+	/* Disable text selection (Firefox only)*/
+	-moz-user-select: none;
+}
+
+.sexybutton.sexysimple::selection {
+	background: transparent;
+}
+
+.sexybutton.sexysimple:hover {
+	background-position: 0 -50px; 
+	color: #fff;
+}
+
+.sexybutton.sexysimple:active { 
+	background-position: 0 100%; 
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.7); 
+	/* Unfortunately, Safari doesn't support inset yet */
+	-webkit-box-shadow: none;
+	
+	/* IE only stuff */
+	border-bottom: 0\9;
+	border-top: 1px solid #666\9;
+}
+
+.sexybutton.sexysimple span {
+	height: auto;
+	padding-left: 24px;
+	padding-right: 0;
+	background-position: left center;
+	background-repeat: no-repeat;
+	/* IE6 still requires a PNG transparency fix */ 
+	/* _padding-left: 0;		Or just hide icons from the undeserving IE6 */
+}
+
+.sexybutton.sexysimple span.after {
+	padding-left: 0;
+	padding-right: 24px;
+	background-position: right center;
+	/* IE6 still requires a PNG transparency fix */ 
+	/* _padding-right: 0;		Or just hide icons from the undeserving IE6 */
+}
+
+/* Simple button colors */
+.sexybutton.sexysimple					{ background-color: #333; }		/* Default */
+.sexybutton.sexysimple.sexyblack		{ background-color: #333; }
+.sexybutton.sexysimple.sexyred		{ background-color: #a90118; }
+.sexybutton.sexysimple.sexyorange	{ background-color: #ff8a00; }
+.sexybutton.sexysimple.sexyyellow	{ background-color: #ffb515; }
+.sexybutton.sexysimple.sexygreen		{ background-color: #59a901; }
+.sexybutton.sexysimple.sexyblue		{ background-color: #015ea9; }
+.sexybutton.sexysimple.sexyteal		{ background-color: #2daebf; }
+.sexybutton.sexysimple.sexymagenta	{ background-color: #a9014b; }
+.sexybutton.sexysimple.sexypurple	{ background-color: #9d01a9; }
+
+/* Simple button sizes */
+.sexybutton.sexysimple.sexysmall          { padding: 4px 7px 5px; font-size: 10px; }
+.sexybutton.sexysimple.sexysmall:active   { padding: 5px 7px 4px; }
+.sexybutton.sexysimple                    { /* default */ }
+.sexybutton.sexysimple:active             { padding: 6px 10px 4px; }
+.sexybutton.sexysimple.sexymedium         { /* default */ }
+.sexybutton.sexysimple.sexymedium:active  { padding: 6px 10px 4px; }
+.sexybutton.sexysimple.sexylarge          { padding: 8px 14px 8px; font-size: 14px; }
+.sexybutton.sexysimple.sexylarge:active   { padding: 9px 14px 7px; }
+.sexybutton.sexysimple.sexyxl             { padding: 8px 14px 8px; font-size: 16px; }
+.sexybutton.sexysimple.sexyxl:active      { padding: 9px 14px 7px; }
+.sexybutton.sexysimple.sexyxxl            { padding: 8px 14px 8px; font-size: 20px; }
+.sexybutton.sexysimple.sexyxxl:active     { padding: 9px 14px 7px; }
+.sexybutton.sexysimple.sexyxxxl           { padding: 8px 14px 8px; font-size: 26px; }
+.sexybutton.sexysimple.sexyxxxl:active    { padding: 9px 14px 7px; }
+
+
+/*
+ * Icon Definitions
+ */
+
+/* Silk Icons - http://www.famfamfam.com/lab/icons/silk/ */
+/* (Obviously not all Silk icons are defined here. Feel free to define any other icons that you may need.) */
+
+.sexybutton span.ok				{ background-image: url(../img/icon/tick.png); }
+.sexybutton span.cancel			{ background-image: url(../img/icon/cross.png); }
+.sexybutton span.add				{ background-image: url(../img/icon/add.png); }
+.sexybutton span.delete			{ background-image: url(../img/icon/delete.png); }
+.sexybutton span.download		{ background-image: url(../img/icon/arrow_down.png); }
+.sexybutton span.download2		{ background-image: url(../img/icon/package_down.png); }
+.sexybutton span.upload			{ background-image: url(../img/icon/arrow_up.png); }
+.sexybutton span.search			{ background-image: url(../img/icon/magnifier.png); }
+.sexybutton span.find			{ background-image: url(../img/icon/find.png); }
+.sexybutton span.first			{ background-image: url(../img/icon/resultset_first.png); }
+.sexybutton span.prev			{ background-image: url(../img/icon/resultset_previous.png); }
+.sexybutton span.next			{ background-image: url(../img/icon/resultset_next.png); }
+.sexybutton span.last			{ background-image: url(../img/icon/resultset_last.png); }
+.sexybutton span.play			{ background-image: url(../img/icon/play_blue.png); }
+.sexybutton span.pause			{ background-image: url(../img/icon/pause_blue.png); }
+.sexybutton span.rewind			{ background-image: url(../img/icon/rewind_blue.png); }
+.sexybutton span.forward		{ background-image: url(../img/icon/forward_blue.png); }
+.sexybutton span.stop			{ background-image: url(../img/icon/stop_blue.png); }
+.sexybutton span.reload			{ background-image: url(../img/icon/reload.png); }
+.sexybutton span.sync			{ background-image: url(../img/icon/arrow_refresh.png); }
+.sexybutton span.save			{ background-image: url(../img/icon/disk.png); }
+.sexybutton span.email			{ background-image: url(../img/icon/email.png); }
+.sexybutton span.print			{ background-image: url(../img/icon/printer.png); }
+.sexybutton span.heart			{ background-image: url(../img/icon/heart.png); }
+.sexybutton span.like			{ background-image: url(../img/icon/thumb_up.png); }
+.sexybutton span.dislike		{ background-image: url(../img/icon/thumb_down.png); }
+.sexybutton span.accept			{ background-image: url(../img/icon/accept.png); }
+.sexybutton span.decline		{ background-image: url(../img/icon/decline.png); }
+.sexybutton span.help			{ background-image: url(../img/icon/help.png); }
+.sexybutton span.home			{ background-image: url(../img/icon/house.png); }
+.sexybutton span.info			{ background-image: url(../img/icon/information.png); }
+.sexybutton span.cut				{ background-image: url(../img/icon/cut.png); }
+.sexybutton span.copy			{ background-image: url(../img/icon/page_white_copy.png); }
+.sexybutton span.paste			{ background-image: url(../img/icon/paste_plain.png); }
+.sexybutton span.erase			{ background-image: url(../img/icon/erase.png); }
+.sexybutton span.undo			{ background-image: url(../img/icon/arrow_undo.png); }
+.sexybutton span.redo			{ background-image: url(../img/icon/arrow_redo.png); }
+.sexybutton span.edit			{ background-image: url(../img/icon/pencil.png); }
+.sexybutton span.calendar		{ background-image: url(../img/icon/date.png); }
+.sexybutton span.user			{ background-image: url(../img/icon/user.png); }
+.sexybutton span.settings		{ background-image: url(../img/icon/cog.png); }
+.sexybutton span.cart			{ background-image: url(../img/icon/cart.png); }
+.sexybutton span.wand			{ background-image: url(../img/icon/wand.png); }
+.sexybutton span.wrench			{ background-image: url(../img/icon/wrench.png); }
